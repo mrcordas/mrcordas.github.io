@@ -85,7 +85,8 @@ img[alt="avatar"]{
 }
 @media screen and (min-width:992px){
     #container{
-        max-width:100%;
+        width: 100%;
+        max-width:1200px;
         margin: 100px auto;
         display:grid;
         grid-template-columns: 25% 25% 25% 25%;
