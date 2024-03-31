@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Figtree;
+    src: url('../assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+body{
+    font-size: 16px;
+    font-family: Figtree;
+    font-weight: 500;
+    background-color:  hsl(47, 88%, 63%);
+}
+
+#container{
+    background-color: hsl(0, 0%, 100%);
+    /* margin:25px auto;  testando position para centralizar*/
+    padding: 24px;
+    min-width: 327px;
+    max-width: 350px;
+    border:1px solid;
+    border-radius: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px;
+}
+
+#blog-image img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+#content > em{
+    font-weight: 900;
+    font-style: normal;
+    font-size: 12px;
+    display: inline-block;
+    background-color: hsl(47, 88%, 63%);
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#content h1{
+    font-weight: 900;
+    font-size: 20px;
+}
+#content h1:hover{
+   color:hsl(47, 88%, 63%);
+   cursor:url('../assets/images/handcursor.svg'), auto;
+}
+.descrition{
+    font-size: 14px; 
+    color:hsl(0, 0%, 50%);
+    margin: 15px auto 24px;
+}
+#autor img{
+    display: inline-block;
+    margin-right: 10px;
+    width: 34px;
+}
