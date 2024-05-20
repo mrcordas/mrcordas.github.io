@@ -1,0 +1,70 @@
+@media screen and (max-width:600px){
+    main{
+        min-width: 345px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:600px){
+    body{
+        align-items: center;
+    }
+    main{
+        max-width: 575px;
+        width: 100%;
+        padding: 40px 60px;
+       
+    }
+    .btndiv{
+        justify-content: end;
+    }
+    
+    .inputDate{
+        justify-content: unset;
+        margin-bottom: 45px;
+    }
+    .numDate{
+        margin-right: 30px;
+        max-width: 150px;
+    }
+    .output p{
+        font-size: 2em;
+    }
+    .warning{
+        font-size: 0.4em;
+    }
+
+}
+
+@media screen and (min-width:992px){
+    main{
+        max-width: 840px; 
+        border-bottom-right-radius: 200px;
+        transform: scale(0.75,0.75);
+    }
+
+    .numDate input{
+        font-size: 1em;
+        /* margin-right: 30px; */
+        /* width: 100%; */
+    }
+
+    .numDate label {
+        font-size: 0.5em;
+    }
+
+    button{
+        top: -45px;
+    }
+
+    button img{
+        width: 54px;
+        height: 54px;
+    }
+    .output p{
+        font-size: 3em;
+    }
+    .output span{
+       letter-spacing: 15px;
+    }
+}
