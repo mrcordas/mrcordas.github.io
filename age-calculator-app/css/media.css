@@ -40,7 +40,6 @@
     main{
         max-width: 840px; 
         border-bottom-right-radius: 200px;
-        transform: scale(0.75,0.75);
     }
 
     .numDate input{
@@ -66,5 +65,12 @@
     }
     .output span{
        letter-spacing: 15px;
+    }
+}
+
+
+@media screen and (max-height:700px){
+    main{
+        transform: scale(0.75,0.75);
     }
 }

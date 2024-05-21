@@ -63,8 +63,8 @@ function validyInput(inputNumDate){
                 Number(inputNumDate[0].value), Number(inputNumDate[1].value), Number(inputNumDate[2].value)
         ];
 
-        d = new Date(year, month-1, day, 0, 0, 0);
-
+        d = new Date(year, month-1, day, (new Date()).getHours(), (new Date()).getMinutes(), 0);
+        console.log(d);
         switch(month){
             case 1:case 3:
             case 5:case 7:
@@ -120,13 +120,13 @@ function validyInput(inputNumDate){
 function calcDate(dateIn){
     let time = Date.now() - dateIn; //diferença data atual e dada como argumento millissegundos
 
-    time = time / (365*24*60*60*1000); //quantidade de anos float
+    time = time / (365.2425*24*60*60*1000); //quantidade de anos float
     let years = Math.floor(time);
 
     time = (time - years)*12; //quantidade de meses float
     let months = Math.floor(time);
     
-    time = (time - months)*30; //quantidade de dias floats
+    time = (time - months)*30.43; //quantidade de dias floats
     let days = Math.floor(time);
 
     return {years, months, days}; //desistruturação
