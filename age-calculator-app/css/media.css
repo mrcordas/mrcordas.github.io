@@ -5,7 +5,7 @@
     }
 }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:601px){
     body{
         align-items: center;
     }
@@ -40,7 +40,6 @@
     main{
         max-width: 840px; 
         border-bottom-right-radius: 200px;
-        transform: scale(0.75,0.75);
     }
 
     .numDate input{
@@ -66,5 +65,20 @@
     }
     .output span{
        letter-spacing: 15px;
+    }
+}
+
+
+@media screen and (orientation:landscape) and (max-height:600px){
+    body{
+        align-items: start;
+    }
+    main{
+        margin: 20px;
+    }
+}
+@media screen and (min-height:600px){
+    main{
+        /* transform: scale(0.8,0.8); */
     }
 }
