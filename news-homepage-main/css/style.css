@@ -15,7 +15,6 @@
 body{
     font-family: inter,sans-serif;
     background-color: var(--Off-white);
-    border:1px solid;
 }
 .container{
     padding: 16px;
@@ -37,12 +36,11 @@ header{
 }
 #links a{
     text-decoration: none;
-    margin:15px;
+    margin-left:2.5em;
     color:var(--Dark-grayish-blue)
 }
 #links a:hover{
     text-decoration: none;
-    margin:15px;
     color:var(--Soft-orange)
 }
 #logo img{
@@ -56,20 +54,19 @@ picture img,
 picture source{
     width: 100%;
 }
-section.intro{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    grid-area: intro;
+section.intro-banner{
+    grid-area: intro-banner;
 }
-.intro h1{
+section.intro-text{
+    grid-area: intro-text;
+}
+.intro-banner h1{
     font-size: 2.5em;
     font-weight: 800;
     line-height: 1;
     margin: 20px 0 16px;
 }
-.btn-more{
+.intro-btn-more{
     display: inline-block;
     text-decoration: none;
     font-size: 0.8em;
@@ -79,7 +76,10 @@ section.intro{
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 5px;
-    margin-top:24px;
+    margin-top:30px;
+}
+.intro-btn-more:hover{
+    background-color: black;
 }
 p{
     font-size: 15px;
@@ -92,7 +92,7 @@ p{
 section.articles-news{
     padding: 20px;
     background-color: var(--Very-dark-blue);
-    margin: 40px auto;
+    margin: 60px auto;
     grid-area: articles-news;
 }
 .news{
@@ -115,41 +115,43 @@ section.articles-news{
     font-weight: 700;
     color:var(--Off-white);
     font-size: 1.2em;
+    cursor: pointer;
+}
+.news h3:hover{
+    color: var(--Soft-orange);
 }
 .news p{
     color:var(--Grayish-blue);
     font-weight: 200;
 }
 /*  */
-.articles-numbered{
-    display:flex;
-    flex-direction: column;
-    grid-area: articles-numbered;
-}
-.numbered{
+
+article.numbered{
     display: flex;
-    margin: 15px auto;
+    margin: 30px auto;
     width: 100%;
-    /* border:1px solid;---- */
 }
-.numbered img{
+article.numbered img{
     display: block;
     margin-right: 20px;
     width: calc(0.5*200px);
     height: calc(0.5*254px);
 }
-.numbered-text{
+article.numbered-text{
     width: 70%;
-
 }
-.numbered-text h2{
+article.numbered h2{
     font-size: 1.9em;
     font-weight: 700;
     color: var(--Grayish-blue);
 }
-.numbered-text h3{
+article.numbered h3{
     font-weight: 800;
     font-size: 1.1em;
+    cursor: pointer;
+}
+article.numbered h3:hover{
+    color:var(--Soft-red);
 }
 @media screen and (min-width:600px){
     #links{
@@ -161,29 +163,14 @@ section.articles-news{
     #mob-menu{
         display: none;
     }
-    section.intro{
-        margin: 30px auto;
-        flex-direction: row;
-        align-items: start;   
-    }
-    .intro div{
-        width: 50%;   
-    }
-    .intro h1{
+    .intro-banner h1{
         font-size: 3.5em;
-        margin: 0;
+        /* margin: 0; */
     }
 }
 @media screen and (min-width:768px){
-    .articles-numbered{
-        flex-direction: row;
-        /* justify-content: space-between; */
-        margin: 50px auto;
-    }
-    .numbered{
-        align-items: center;
-    }
-}
+  
+}   
 @media screen and (min-width:992px){
     .container{
         width: 100%;
@@ -192,17 +179,20 @@ section.articles-news{
         grid-template-areas: 
         'header header header'
         'banner banner articles-news'
-        'intro intro articles-news'
-        'articles-numbered articles-numbered articles-numbered';
-        gap:20px 30px;
+        'intro-banner intro-text articles-news'
+        '. . .';
+        gap:10px;
     }
-
-    section.articles-news, section.banner,
-    section.intro{
+    header{
+        margin: 80px auto 20px;
+    }
+    section.articles-news, section.banner{
         margin: 0;
     }
-    .numbered-text{
-        /* padding-right: 30px; */
-        margin-right: 30px;
+
+    @media screen and (min-width:1200px){
+        .container{
+            gap:30px
+        }
     }
 }
