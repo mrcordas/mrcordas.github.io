@@ -1,3 +1,4 @@
+@import url('./mobilemenu.css');
 @font-face {
     font-family: inter;
     src: url('../assets/fonts/Inter-VariableFont_slntwght.ttf');
@@ -15,6 +16,7 @@
 body{
     font-family: inter,sans-serif;
     background-color: var(--Off-white);
+    position:relative;
 }
 .container{
     padding: 16px;
@@ -28,23 +30,36 @@ header{
     grid-area: header;
     width: 100%;
 }
-#links{
-    display: none;
+ul.links-li{
+    display: none; /***********/
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-#links a{
+ul.links-li a{
     text-decoration: none;
-    margin-left:2.5em;
+    margin: 20px auto auto 24px;
+    display:block;
+    font-size: 1.1em;
+    font-weight: 600;
     color:var(--Dark-grayish-blue)
 }
-#links a:hover{
+ul.links-li a:hover{
     text-decoration: none;
     color:var(--Soft-orange)
 }
 #logo img{
     width: 70%;
+}
+#mob-menu-close{
+    display:none;/***********/
+    text-align: right;
+    margin:25px 20px 80px 20px;
+    cursor: pointer;
+}
+#mob-menu-icon{
+    cursor: pointer;
+    /* display: none; */ /*********/
 }
 section.banner{
    margin-top: 32px;
@@ -154,13 +169,17 @@ article.numbered h3:hover{
     color:var(--Soft-red);
 }
 @media screen and (min-width:600px){
-    #links{
+    ul.links-li{
         display: flex;
+    }
+    ul.links-li a{
+        margin-left:2.5em;/***********/
+        font-size: 1em;
     }
     #logo img{
         width: 100%;
     }
-    #mob-menu{
+    #mob-menu-icon{
         display: none;
     }
     .intro-banner h1{
@@ -184,7 +203,7 @@ article.numbered h3:hover{
         gap:10px;
     }
     header{
-        margin: 80px auto 20px;
+        margin: 80px auto 40px;
     }
     section.articles-news, section.banner{
         margin: 0;

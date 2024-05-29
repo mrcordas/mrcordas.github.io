@@ -1,0 +1,15 @@
+.displaymob-menu{
+    position: fixed;
+    height: 100%;
+    top: 0;
+}
+.nav-bar-show{
+    background-color: hsla(240, 100%, 5%, 0.473);
+    width: 100%;
+    left:0;
+}
+.links-show{
+    background-color: var(--Off-white);
+    width: 70%;
+    right: 0;
+}
